@@ -7,6 +7,6 @@ export async function getPlace(keyword: string, location: string) {
     return result.data;
   } catch (error) {
     console.error(error);
-    return [];
+    return { error: true };
   }
 }

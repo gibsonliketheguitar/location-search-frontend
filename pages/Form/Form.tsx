@@ -5,10 +5,13 @@ import {
   FormControl,
   FormControlLabel,
   FormLabel,
+  IconButton,
+  InputAdornment,
   Radio,
   RadioGroup,
   TextField,
 } from "@mui/material";
+import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import { Controller, useForm } from "react-hook-form";
 import { T_Radio_Location, radioOption as options } from "./_radioOption";
 import { getPlace } from "./_api";
@@ -58,6 +61,7 @@ export function Form(props: any) {
           <TextField
             {...field}
             autoFocus
+            aria-label="keyword input"
             margin="dense"
             id="keyword"
             label="Search"
@@ -75,6 +79,7 @@ export function Form(props: any) {
           Select a Location
         </FormLabel>
         <Controller
+          aria-label="radio group location"
           name="location"
           render={({ field }) => (
             <RadioGroup aria-label="location-radio-group" {...field}>
@@ -98,10 +103,14 @@ export function Form(props: any) {
         justifyContent="space-between"
         sx={{ marginTop: theme.spacing(8) }}
       >
-        <Button variant="text" onClick={handleReset}>
+        <Button
+          aria-label="clear search form"
+          variant="text"
+          onClick={handleReset}
+        >
           Clear all
         </Button>
-        <Button variant="contained" type="submit">
+        <Button aria-label="submit search" variant="contained" type="submit">
           Search
         </Button>
       </Box>

@@ -11,6 +11,10 @@ export default function Home() {
   const [isLoading, setLoading] = useState<boolean>(false);
   const [list, setList] = useState<T_LocationCard[] | undefined>(undefined);
 
+  const handleReset = () => {
+    setList(undefined);
+  };
+
   return (
     <>
       <Head>
@@ -29,8 +33,14 @@ export default function Home() {
           padding: theme.spacing(3),
         }}
       >
-        <Form setLoading={setLoading} setList={setList} />
-        {isLoading ? <LoadingList /> : <List data={list} />}
+        {!list && !isLoading && (
+          <Form setLoading={setLoading} setList={setList} />
+        )}
+        {isLoading ? (
+          <LoadingList />
+        ) : (
+          <List data={list} handleReset={handleReset} />
+        )}
       </Container>
     </>
   );

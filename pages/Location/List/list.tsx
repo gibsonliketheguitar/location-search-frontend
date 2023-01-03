@@ -1,16 +1,34 @@
+import theme from "styles/theme";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { Card, T_LocationCard } from "../Card/card";
+import { Card } from "../index";
+import { T_LocationCard } from "../Card/card";
 
 export type T_LocationList = {
   data: T_LocationCard[] | [] | undefined;
+  handleReset: () => void;
 };
 
-export function List({ data }: T_LocationList) {
-  if (typeof data !== "number" && data === undefined)
-    return <Typography>Search for your next experience</Typography>;
-  else if (data.length < 1) {
-    return <Typography>No location found</Typography>;
+function renderText(arr: undefined | []): string {
+  let res = "";
+  if (!Array.isArray(arr) && arr === undefined)
+    res = "Search for your next experience";
+  else if (arr.length < 1) res = "No location found ";
+  return res;
+}
+
+export function List({ data, handleReset }: T_LocationList) {
+  if (!data) {
+    return (
+      <Box
+        sx={{
+          marginTop: theme.spacing(3),
+        }}
+      >
+        <Typography>{renderText(data)}</Typography>
+      </Box>
+    );
   }
   return (
     <Box
@@ -19,10 +37,33 @@ export function List({ data }: T_LocationList) {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        width: "600px",
+        width: "100%",
+        maxWidth: "600px",
+        marginTop: theme.spacing(3),
       }}
     >
-      <Typography>{data.length} Locations</Typography>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          paddingX: theme.spacing(1),
+          paddingY: theme.spacing(3),
+          width: "100%",
+        }}
+      >
+        <Typography sx={{ marginRight: theme.spacing(2) }}>
+          {data.length} Locations
+        </Typography>
+        <Button
+          aria-label="reset search result"
+          variant="outlined"
+          onClick={handleReset}
+        >
+          Reset
+        </Button>
+      </Box>
       <Box sx={{ display: "flex", flexDirection: "column" }}>
         {data.map((ele: T_LocationCard, indx: number) => {
           return <Card key={ele.name + indx} {...ele} />;

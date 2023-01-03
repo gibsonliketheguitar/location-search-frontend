@@ -5,7 +5,17 @@ import theme from "styles/theme";
 export function LoadingList() {
   const list = new Array(10).fill(0);
   return (
-    <Box sx={{ display: "flex", flexDirection: "column", width: "100%" }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        mainWidth: "200px",
+        maxWidth: "400px",
+        width: "100%",
+        marginTop: theme.spacing(3),
+        borderRadius: theme.spacing(1),
+      }}
+    >
       {list.map((_, indx) => {
         return (
           <Skeleton

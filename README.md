@@ -18,4 +18,47 @@ npm run dev
 yarn dev
 ```
 
-##
+## Planning
+
+[Excalidraw link](https://excalidraw.com/#json=HQOjXDy0xtNf5tY2Wpwjv,yTbOPPjH0hpdvLZRvY7nAA)
+
+## Live Link
+
+https://location-search-frontend.vercel.app/
+
+## How to read the files
+
+- inspired by Atlassian React Talk and personal experience to keep UI and their components close to each other
+- if this was a bigger project, based on the react talk, I would separate the state
+
+```
+--- Page
+    --- Component1
+        --- api
+        --- test
+        --- util
+
+    --- Component2
+
+UI View
+- <State>
+- <Component 1 state={state}>
+- <Component 2 state={state}>
+
+```
+
+## Focus of this assignment
+
+- I disregard git commits and focus on speed in building
+
+## Lesson Learned
+
+- Time sink was biased toward what I have written the past week. What I should have done is reference a similar concept/code and execute a high-level plan with improvement
+- Styling takes a bit more, and need to strengthen the design system and apply the design system to projects
+- To improve speed, need to write a template code generator to create components, tests, and APIs.
+  EG -> Type of Location Card => generates LocationCard.tsx with its props, Location.Card.test.tsx
+
+## Things to do in next
+
+- Add validation to react hook form
+- Add cypress test or playright

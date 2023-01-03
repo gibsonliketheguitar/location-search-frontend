@@ -25,6 +25,12 @@ export const radioOption: T_Radio_Location[] = [
     longitude: -110.6818,
   },
   {
+    name: "Grand Teton National Park",
+    state: "WY",
+    latitude: 43.7904,
+    longitude: -110.6818,
+  },
+  {
     name: "Colum River Gorge",
     state: "OR",
     latitude: 45.7242,

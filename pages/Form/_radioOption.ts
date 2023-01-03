@@ -9,7 +9,7 @@ export const radioOption: T_Radio_Location[] = [
   {
     name: "Snowmass",
     state: "CO",
-    latitude: 29.213,
+    latitude: 39.213,
     longitude: -106.9378,
   },
   {

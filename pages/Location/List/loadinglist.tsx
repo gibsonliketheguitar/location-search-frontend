@@ -6,6 +6,7 @@ export function LoadingList() {
   const list = new Array(10).fill(0);
   return (
     <Box
+      aria-label="loading skeleton container"
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -19,6 +20,7 @@ export function LoadingList() {
       {list.map((_, indx) => {
         return (
           <Skeleton
+            aria-label="loading skeleton card"
             key={indx}
             variant="rectangular"
             animation="pulse"

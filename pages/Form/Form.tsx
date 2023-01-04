@@ -5,24 +5,27 @@ import {
   FormControl,
   FormControlLabel,
   FormLabel,
-  IconButton,
-  InputAdornment,
   Radio,
   RadioGroup,
   TextField,
 } from "@mui/material";
-import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
+import theme from "styles/theme";
 import { Controller, useForm } from "react-hook-form";
 import { T_Radio_Location, radioOption as options } from "./_radioOption";
 import { getPlace } from "./_api";
-import theme from "styles/theme";
+import { T_list } from "pages/Location/List/list";
+
+type T_Form = {
+  setList: React.Dispatch<T_list>;
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
 type T_UploadForm = {
   keyword: string;
   location: string;
 };
 
-export function Form(props: any) {
+export function Form(props: T_Form) {
   const { setList, setLoading } = props;
   const { control, handleSubmit, reset } = useForm<T_UploadForm>({
     defaultValues: {

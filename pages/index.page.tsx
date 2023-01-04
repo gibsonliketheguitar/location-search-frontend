@@ -5,11 +5,11 @@ import theme from "styles/theme";
 
 import { Form } from "./Form";
 import { List, LoadingList } from "./Location";
-import { T_LocationCard } from "./Location/Card/card";
+import { T_list } from "./Location/List/list";
 
 export default function Home() {
   const [isLoading, setLoading] = useState<boolean>(false);
-  const [list, setList] = useState<T_LocationCard[] | undefined>(undefined);
+  const [list, setList] = useState<T_list>(undefined);
 
   const handleReset = () => {
     setList(undefined);

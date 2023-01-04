@@ -5,8 +5,10 @@ import Typography from "@mui/material/Typography";
 import { Card } from "../index";
 import { T_LocationCard } from "../Card/card";
 
+export type T_list = T_LocationCard[] | [] | undefined;
+
 export type T_LocationList = {
-  data: T_LocationCard[] | [] | undefined;
+  data: T_list;
   handleReset: () => void;
 };
 

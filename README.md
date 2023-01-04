@@ -29,7 +29,7 @@ https://location-search-frontend.vercel.app/
 ## How to read the files
 
 - inspired by Atlassian React Talk and personal experience to keep UI and their components close to each other
-- if this was a bigger project, based on the react talk, I would separate the state
+- if this was a bigger project, based on the react talk, I would separate the state and use redux?
 
 ```
 --- Page
@@ -62,3 +62,22 @@ UI View
 
 - Add validation to react hook form
 - Add cypress test or playright
+
+## other thoughts
+
+- Based on convo with EM, I wonder if it's possible to integrate RTL with accessibility testing, and localization.
+- In addition. What is a scalable way to handle copywriting/localization of an application?
+
+```
+---
+  -- Page
+    - view.page.tsx
+    - Component 1
+      - _api
+      - _location.ts
+      - component1.test.tsx
+      - component1.tsx
+      - util
+      - index.ts
+``
+```

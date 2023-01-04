@@ -30,10 +30,18 @@ export function LocationCard(props: T_LocationCard) {
           justifyContent: "space-between",
         }}
       >
-        <Typography fontSize={theme.spacing(3)} fontWeight={700}>
+        <Typography
+          aria-label="business name"
+          fontSize={theme.spacing(3)}
+          fontWeight={700}
+        >
           {name}
         </Typography>
-        <Typography fontSize={theme.spacing(1.5)} fontWeight={500}>
+        <Typography
+          aria-label="address"
+          fontSize={theme.spacing(1.5)}
+          fontWeight={500}
+        >
           {address}
         </Typography>
       </Box>
@@ -46,6 +54,7 @@ export function LocationCard(props: T_LocationCard) {
         }}
       >
         <Typography
+          aria-label="rating"
           visibility={rating === -1 ? "hidden" : "initial"}
           fontSize={theme.spacing(4)}
           sx={{ padding: theme.spacing(2) }}

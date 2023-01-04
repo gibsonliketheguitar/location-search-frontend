@@ -8,7 +8,6 @@ describe("Location Card", () => {
   let name: string;
   let address: string;
   let rating: number;
-  beforeEach(() => {});
 
   test("should render given name, address, and rating", () => {
     name = "Pizza King";

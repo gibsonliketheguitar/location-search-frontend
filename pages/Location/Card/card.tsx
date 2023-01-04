@@ -1,13 +1,8 @@
-import { Card, useThemeProps } from "@mui/material";
+import { Card } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/system/Box";
 import theme from "styles/theme";
-
-export type T_LocationCard = {
-  name: string;
-  address: string;
-  rating: number;
-};
+import { T_LocationCard } from ".";
 
 export function LocationCard(props: T_LocationCard) {
   const { address, name, rating } = props;

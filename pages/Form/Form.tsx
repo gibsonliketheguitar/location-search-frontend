@@ -1,4 +1,5 @@
 import React from "react";
+import theme from "styles/theme";
 import {
   Box,
   Button,
@@ -9,21 +10,14 @@ import {
   RadioGroup,
   TextField,
 } from "@mui/material";
-import theme from "styles/theme";
 import { Controller, useForm } from "react-hook-form";
-import { T_Radio_Location, radioOption as options } from "./_radioOption";
-import { getPlace } from "./_api";
-import { T_list } from "pages/Location/List/list";
-
-type T_Form = {
-  setList: React.Dispatch<T_list>;
-  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
-type T_UploadForm = {
-  keyword: string;
-  location: string;
-};
+import {
+  getPlace,
+  radioOption as OPTIONS,
+  T_Form,
+  T_Radio_Location,
+  T_UploadForm,
+} from ".";
 
 export function Form(props: T_Form) {
   const { setList, setLoading } = props;
@@ -86,7 +80,7 @@ export function Form(props: T_Form) {
           name="location"
           render={({ field }) => (
             <RadioGroup aria-label="location-radio-group" {...field}>
-              {options.map((ele: T_Radio_Location, indx) => {
+              {OPTIONS.map((ele: T_Radio_Location, indx) => {
                 return (
                   <FormControlLabel
                     key={ele.name + indx}

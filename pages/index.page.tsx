@@ -4,12 +4,11 @@ import { Container } from "@mui/material";
 import theme from "styles/theme";
 
 import { Form } from "./Form";
-import { List, LoadingList } from "./Location";
-import { T_list } from "./Location/List/list";
+import { List, LoadingList, T_List } from "./Location/List";
 
 export default function Home() {
   const [isLoading, setLoading] = useState<boolean>(false);
-  const [list, setList] = useState<T_list>(undefined);
+  const [list, setList] = useState<T_List>(undefined);
 
   const handleReset = () => {
     setList(undefined);

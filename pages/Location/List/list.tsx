@@ -2,15 +2,8 @@ import theme from "styles/theme";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { Card } from "../index";
-import { T_LocationCard } from "../Card/card";
-
-export type T_list = T_LocationCard[] | [] | undefined;
-
-export type T_LocationList = {
-  data: T_list;
-  handleReset: () => void;
-};
+import { LocationCard as Card, T_LocationCard } from "../Card";
+import { T_LocationList } from "./_d";
 
 export function List({ data, handleReset }: T_LocationList) {
   if (!data) {

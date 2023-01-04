@@ -1,9 +1,4 @@
-export type T_Radio_Location = {
-  name: string;
-  state: string;
-  latitude: number;
-  longitude: number;
-};
+import { T_Radio_Location } from ".";
 
 export const radioOption: T_Radio_Location[] = [
   {

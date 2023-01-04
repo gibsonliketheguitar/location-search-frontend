@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
-import { T_LocationCard } from "pages/Location/Card/card";
+import { T_LocationCard } from "pages/Location/Card";
 
 type Data = {
   data?: T_LocationCard[];

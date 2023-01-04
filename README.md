@@ -103,7 +103,7 @@ UI View
 - Next steps would be check if NextJs alias configuration
   -- at root level we import type from ../list. I would like something like @List. But I am unsure how to create a general rule to capture nested index.ts files.
 
-- TODO: explore these article again <-- this person also worked on JIRA probably on the same team as the person who gave the talk. File structure mention in blog is the ame
+- TODO: explore these article again <-- this person worked on JIRA probably on the same team as the person who gave the talk. File structure mention in blog is the ame
   -- https://www.developerway.com/posts/advanced-typescript-for-react-developers
   -- https://www.developerway.com/posts/react-project-structure
 

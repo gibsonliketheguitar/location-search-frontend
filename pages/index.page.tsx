@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Container } from "@mui/material";
 import theme from "styles/theme";
 
-import { Form } from "./Form";
+import { SearchForm } from "./Form";
 import { List, LoadingList, T_List } from "./Location/List";
 
 export default function Home() {
@@ -33,7 +33,7 @@ export default function Home() {
         }}
       >
         {!list && !isLoading && (
-          <Form setLoading={setLoading} setList={setList} />
+          <SearchForm setLoading={setLoading} setList={setList} />
         )}
         {isLoading ? (
           <LoadingList />

@@ -125,7 +125,8 @@ type T_API_Config = {
   URL: string,
   query: string
 }
-
+//to do https://youtube.com/shorts/xRDhSWPt6nY?feature=share -> handling fetch errors
+//https://www.youtube.com/watch?v=PB2nNc6nsTY -> fixing url query
 const formAPI = {
   search: {
     method: 'GET',

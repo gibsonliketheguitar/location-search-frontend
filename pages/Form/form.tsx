@@ -48,7 +48,7 @@ export function SearchForm(props: T_Form) {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      style={{ padding: theme.spacing(2) }}
+      style={{ padding: theme.spacing(4), backgroundColor: '#d2d4d3', borderRadius: theme.spacing(2) }}
     >
       <Controller
         name="keyword"
